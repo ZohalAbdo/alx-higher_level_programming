@@ -3,4 +3,6 @@
 
 
 class Square:
+    """_summary_"""
+
     pass
