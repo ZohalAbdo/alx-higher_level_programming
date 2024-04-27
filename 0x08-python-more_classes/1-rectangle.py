@@ -11,6 +11,12 @@ class Rectangle:
         self.__width = width
         self.__height = height
 
+    def __repr__(self):
+        """Return a string representation of the object."""
+
+        return ("{{'_Rectangle__height': {}, '_Rectangle__width': {}}}"
+                .format(self.__height, self.__width))
+
     @property
     def height(self):
         """_summary_
