@@ -6,6 +6,7 @@ class Rectangle:
     """_summary_"""
 
     number_of_instances = 0
+    print_symbol = "#"
 
     def __init__(self, width=0, height=0):
         """_summary_"""
@@ -73,7 +74,7 @@ class Rectangle:
 
         if self.width == 0 or self.height == 0:
             return ""
-        return "\n".join(["#" * self.width for _ in range(self.height)])
+        return "\n".join([Rectangle.print_symbol * self.width for _ in range(self.height)])
 
     def __repr__(self):
         """Return a representation of the rectangle."""
@@ -85,10 +86,26 @@ class Rectangle:
         print("Bye rectangle...")
         Rectangle.number_of_instances -= 1
 
-my_rectangle_1 = Rectangle(2, 4)
-my_rectangle_2 = Rectangle(2, 4)
-print("{:d} instances of Rectangle".format(Rectangle.number_of_instances))
-del my_rectangle_1
-print("{:d} instances of Rectangle".format(Rectangle.number_of_instances))
-del my_rectangle_2
-print("{:d} instances of Rectangle".format(Rectangle.number_of_instances))
+my_rectangle_1 = Rectangle(8, 4)
+print(my_rectangle_1)
+print("--")
+my_rectangle_1.print_symbol = "&"
+print(my_rectangle_1)
+print("--")
+
+my_rectangle_2 = Rectangle(2, 1)
+print(my_rectangle_2)
+print("--")
+Rectangle.print_symbol = "C"
+print(my_rectangle_2)
+print("--")
+
+my_rectangle_3 = Rectangle(7, 3)
+print(my_rectangle_3)
+
+print("--")
+
+my_rectangle_3.print_symbol = ["C", "is", "fun!"]
+print(my_rectangle_3)
+
+print("--")
