@@ -1,2 +1,2 @@
----this is comment
+-- Lists all databases of your MySQL server
 SHOW DATABASES;
